@@ -1,6 +1,6 @@
 import React from "react";
 import { IProductInformation } from "../redux/products/types";
-import { Card, Grid } from "semantic-ui-react";
+import { Card } from "semantic-ui-react";
 import { useNavigate } from "react-router-dom";
 
 export interface IProductCardProps {

@@ -1,5 +1,5 @@
 import React from "react";
-import { useState, useContext } from "react";
+import { useContext } from "react";
 import { CartContext } from "./App";
 import { useNavigate } from "react-router";
 
@@ -17,7 +17,7 @@ const Cart = () => {
       onClick={handleClick}
       style={{ position: "absolute", right: "0px", top: "0px" }}
     >
-      <img src="/cart.jpeg" height={50} width={50} data-value={0} />
+      <img src="/cart.jpeg" height={50} width={50} data-value={0} alt="cart" />
       <span
         style={{
           paddingLeft: "9px",

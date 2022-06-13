@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { useContext } from "react";
 import Cart from "./Cart";
 import { CartContext } from "./App";
 import { Grid, Image, Card } from "semantic-ui-react";
@@ -16,7 +16,6 @@ export interface IProducts {
 
 const CartComponent = () => {
   const itemsCountContext = useContext(CartContext);
-  const [products, setProducts] = useState<IProducts[]>([]);
   const map = itemsCountContext.productQuantityMap;
 
   const productList: IProductInformation[] = useSelector(
@@ -67,7 +66,7 @@ const CartComponent = () => {
                   </Grid.Column>
                 );
               }
-              return;
+              return null;
             })}
         </Grid.Row>
       </Grid>

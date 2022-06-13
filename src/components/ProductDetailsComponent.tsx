@@ -8,10 +8,8 @@ import { fetchSelectedProduct } from "../redux/product/action";
 import { Dispatch } from "redux";
 import { Card, Icon } from "semantic-ui-react";
 import Cart from "./Cart";
-import { quantity } from "../shared/constants";
 import { useState, useContext } from "react";
 import { CartContext } from "./App";
-import { ICartDetails } from "../redux/cart/types";
 import { addSelectedProducts } from "../redux/cart/actions";
 import { useRef } from "react";
 import { generateArrayFromInputNumber } from "../shared/util";
@@ -36,11 +34,7 @@ const ProductDetailsComponent = (props: any) => {
       return state.product.data;
     }
   );
-  const addCartDetails: ICartDetails | null | undefined = useSelector(
-    (state: ApplicationState) => {
-      return state.addCartDetails.data;
-    }
-  );
+
   const dispatch: Dispatch<any> = useDispatch();
 
   useEffect(() => {

@@ -1,6 +1,5 @@
 import { Reducer } from "redux";
 import { IProductInformationState, ProductActionTypes } from "./types";
-import { IProductInformation } from "../products/types";
 
 const initialState: IProductInformationState = {
   loading: false,

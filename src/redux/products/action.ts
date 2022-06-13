@@ -1,7 +1,7 @@
 import { ActionCreator, Action, Dispatch } from "redux";
 import { ThunkAction } from "redux-thunk";
 import { ApplicationState } from "..";
-import { ProductActionTypes, IProductInformation, IAction } from "./types";
+import { ProductActionTypes, IProductInformation } from "./types";
 import { PRODUCT_LIST_URL } from "../../shared/constants";
 
 export type AppThunk = ActionCreator<

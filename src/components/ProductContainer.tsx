@@ -1,12 +1,9 @@
 import React from "react";
 import { useEffect } from "react";
-import { useState } from "react";
 import { IProductInformation } from "../redux/products/types";
-import { PRODUCT_LIST_URL } from "../shared/constants";
-import { Image, Grid, Divider } from "semantic-ui-react";
+import { Grid, Divider } from "semantic-ui-react";
 import ProductCard from "./ProductCard";
 import { useSelector, useDispatch } from "react-redux";
-import { IProductsInformationState } from "../redux/products/types";
 import { Dispatch } from "redux";
 import { fetchProducts } from "../redux/products/action";
 import { ApplicationState } from "../redux";
@@ -27,7 +24,6 @@ const ProductContainer = () => {
   return (
     <>
       <Divider horizontal>Shop Products</Divider>
-      {/*products && products.length > 0 && <ProductCard products={products} />*/}
       <Grid stackable columns="equal" centered>
         {products &&
           products.map((product: IProductInformation) => {
